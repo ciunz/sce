@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/vTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="18dp">
+
+            <TextView
+                style="@style/text.medium.light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Total" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                style="@style/text.bold.light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/tvEach"
+                style="@style/text.light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvDimension"
+                style="@style/text.light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/vHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_white_rounded"
+            android:elevation="4dp"
+            android:foreground="@drawable/bg_selectable_rounded"
+            android:padding="12dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivIconHeight"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_height" />
+
+            <ImageView
+                android:id="@+id/ivCmHeight"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_cm"
+                android:tint="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@id/ivIconHeight"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLabelHeight"
+                    style="@style/text.small.secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Tinggi" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHeight"
+                    style="@style/edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Input tinggi (cm)"
+                    android:inputType="number"
+                    android:textAppearance="@style/text.bold.large"
+                    app:hintTextAppearance="@style/text.secondary" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_white_rounded"
+            android:elevation="4dp"
+            android:foreground="@drawable/bg_selectable_rounded"
+            android:padding="12dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivIconWidth"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_width" />
+
+            <ImageView
+                android:id="@+id/ivCmWidth"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_cm"
+                android:tint="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@id/ivIconWidth"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLabelWidth"
+                    style="@style/text.small.secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Lebar" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWidth"
+                    style="@style/edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan lebar (cm)"
+                    android:inputType="number"
+                    android:textAppearance="@style/text.bold.large"
+                    app:hintTextAppearance="@style/text.secondary" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vDiameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_white_rounded"
+            android:elevation="4dp"
+            android:foreground="@drawable/bg_selectable_rounded"
+            android:padding="12dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivIconDiameter"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_diameter" />
+
+            <ImageView
+                android:id="@+id/ivCmDiameter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_cm"
+                android:tint="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@id/ivIconDiameter"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLabelDiameter"
+                    style="@style/text.small.secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Diameter" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDiameter"
+                    style="@style/edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan diameter (cm)"
+                    android:inputType="number"
+                    android:textAppearance="@style/text.bold.large"
+                    app:hintTextAppearance="@style/text.secondary" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_white_rounded"
+            android:elevation="4dp"
+            android:foreground="@drawable/bg_selectable_rounded"
+            android:padding="12dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivIconQuantity"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_calculator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_toEndOf="@id/ivIconQuantity"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLabelQuantity"
+                    style="@style/text.small.secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="Jumlah" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etQuantity"
+                    style="@style/edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan jumlah"
+                    android:inputType="number"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="@style/text.bold.large"
+                    app:hintTextAppearance="@style/text.secondary" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/text.medium.large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Tambahan" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:paddingHorizontal="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalculate"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Hitung" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
